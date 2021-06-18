@@ -3,20 +3,6 @@ import http from "http";
 import app from "./app";
 import { connectDb, disconnectDb } from "./db";
 
-const express = require('express');
-
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
-const dbConfig = {
-  host: 'localhost',
-  port: 5432,
-  user: 'moniqueking',
-  password: '',
-  database: 'qadata',
-};
-
-// const pool = new Pool(dbConfig);
 
 const port = parseInt(process.env.PORT || "3000");
 
